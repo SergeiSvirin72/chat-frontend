@@ -1,10 +1,16 @@
 <template>
   <b-container class="vh-100">
     <b-row class="h-100 py-4">
-      <b-col cols="4" class="border py-4">
-        1 of 2
+      <b-col cols="4" class="d-inline-flex flex-column h-100 py-4">
+        <b-form-input v-model="search" placeholder="Enter user email" class="mb-2"></b-form-input>
+        <b-list-group class="flex-grow-1 h-100 border">
+          <b-list-group-item href="#some-link" class="border-0 border-bottom">Awesome link</b-list-group-item>
+          <b-list-group-item href="#" active class="border-0 border-bottom">Link with active state</b-list-group-item>
+          <b-list-group-item href="#" class="border-0 border-bottom">Action links are easy</b-list-group-item>
+          <b-list-group-item href="#foobar" disabled class="border-0 border-bottom">Disabled link</b-list-group-item>
+        </b-list-group>
       </b-col>
-      <b-col cols="8" class="d-inline-flex flex-column h-100 p-4">
+      <b-col cols="8" class="d-inline-flex flex-column h-100 py-4">
         <div class="d-inline-flex flex-column border rounded mb-2 overflow-hidden">
           <div class="d-inline-flex justify-content-between bg-light border-bottom p-2">
             <h5 class="m-0">General</h5>
@@ -73,6 +79,7 @@ export default {
       content: '',
       users: [],
       typing: '',
+      search: '',
     }
   },
   methods: {
